@@ -11,8 +11,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] =\
     'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
+
 manager = Manager(app)
+db = SQLAlchemy(app)
 bootstrap = Bootstrap(app)
 
 @app.route("/")
