@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Calorie Counter</title>
+    <meta charset="utf-8">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  </head>
+  <body> 
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Cals</a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="{{ url_for('main.index') }}">Home</a></li>
+            <li><a class="navbar-brand" href="{{ url_for('main.meals') }}">Meals</a></li>
+            <li><a class="navbar-brand" href="{{ url_for('main.recipes') }}">Recipes</a></li>
+            <li><a class="navbar-brand" href="{{ url_for('main.foods') }}">Foods</a></li>
+            <li><a class="navbar-brand" href="{{ url_for('main.exercise') }}">Exercise</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+    {% block container %}
+    {% endblock %}
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  </body>
+</html> 
