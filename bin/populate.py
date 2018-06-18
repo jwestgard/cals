@@ -4,7 +4,7 @@ import csv
 import sqlite3
 import sys
 
-DB_PATH    = 'cals/db/example.sqlite'
+DB_PATH    = '../cals/db/example.sqlite'
 INPUT_PATH = sys.argv[1]
 INSERT_CMD = '''INSERT INTO foods (name, serving, cals) 
                 VALUES ("{food.name}", "{food.serving}", {food.cals})'''
